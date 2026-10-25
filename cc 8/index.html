@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Electricity Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>⚡ Smart Electricity Usage Predictor</h1>
+    <p>Predict Your Electricity Consumption</p>
+
+    <div class="card">
+        <h2>🏠 Add Appliance</h2>
+
+        <input type="text" id="appliance"
+               placeholder="Appliance Name">
+
+        <input type="number" id="power"
+               placeholder="Power in Watts" min="1">
+
+        <input type="number" id="hours"
+               placeholder="Daily Usage Hours" min="0" max="24">
+
+        <button onclick="addAppliance()">Add Appliance</button>
+    </div>
+
+    <div class="card">
+        <h2>📋 Appliance List</h2>
+        <div id="applianceList"></div>
+    </div>
+
+    <div class="card">
+        <h2>📊 Electricity Prediction</h2>
+
+        <button onclick="predictUsage()">
+            Predict Usage
+        </button>
+
+        <h3 id="dailyUsage"></h3>
+        <h3 id="monthlyUsage"></h3>
+        <h3 id="bill"></h3>
+    </div>
+
+    <div class="card">
+        <h2>📈 Usage Chart</h2>
+        <canvas id="usageChart"></canvas>
+    </div>
+
+    <div class="card">
+        <h2>💡 Energy Saving Tips</h2>
+        <p id="tips"></p>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
